@@ -1,3 +1,4 @@
+DROP DATABASE ShopDB;
 CREATE DATABASE ShopDB; 
 USE ShopDB; 
 
@@ -19,10 +20,10 @@ CREATE TABLE GeoIPCache (
 CREATE TABLE ProductDescription (
 	ID INT,
     Description VARCHAR(200),
+    ProductID INT,
     CountryID INT,
-	ProductID INT,
     PRIMARY KEY (ID)
-) ENGINE=InnoDB;
+) ENGINE=MyISAM;
 -- Create a table for storing logs. For now we don't need to save them, but we need to implement functionality (Columns: ID, Time, LogRecord)
 CREATE TABLE Logs (
 	ID INT,
